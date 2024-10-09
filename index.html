@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <h1>Sorting Visualizer <img src="image/logo.png" alt="Logo Image" class="header-icon"></h1>
+    </div>
+    <nav class="navbar">
+        <button onclick="bubbleSort()">Bubble Sort</button>
+        <button onclick="selectionSort()">Selection Sort</button>
+        <button onclick="insertionSort()">Insertion Sort</button>
+    </nav>
+    <div class="controls">
+        <div class="left-controls">
+            <button onclick="generateArray()" class="control-button">Generate Array</button>
+            <label for="speed-range">Delay (ms): </label>
+            <input type="range" id="speed-range" min="50" max="1000" value="100" onchange="setSpeed(this.value)">
+        </div>
+    </div>
+    <div id="array-container"></div>
+    <div class="status">
+        <p id="status-message">Ready to sort!</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
